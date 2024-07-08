@@ -3,55 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Nombre - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <h1>Leonardo Di Franco</h1>
-        <p>Estudiante de Programación</p>
-    </header>
-    
-    <main>
-        <section id="projects">
-            <h2>Proyectos Destacados</h2>
-            <div class="project">
-                <h3>Proyecto 1</h3>
-                <p>Breve descripción del proyecto.</p>
-                <a href="#">Ver en GitHub</a>
-            </div>
-            <!-- Repite este bloque para más proyectos -->
-        </section>
-
-        <section id="experience">
-            <h2>Experiencia Laboral</h2>
-            <div class="job">
-                <h3>Título del Puesto, Empresa</h3>
-                <p>Breve descripción de tus responsabilidades y logros.</p>
-            </div>
-            <!-- Repite este bloque para más experiencia laboral -->
-        </section>
-
-        <section id="education">
-            <h2>Educación</h2>
-            <p>Diploma en Servicios TI - Nombre de la Institución (Fecha)</p>
-            <!-- Agrega más educación si es necesario -->
-        </section>
-
-        <section id="skills">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>C#</li>
-                <li>SQL</li>
-                <!-- Agrega más habilidades si es necesario -->
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>Contacto: <a href="mailto:tuemail@example.com">tuemail@example.com</a></p>
-    </footer>
+    <div id="calculadora">
+        <input id="pantalla" readonly>
+        <div id="botones-contenedor">
+            <button class="operador-btn full-btn" onclick="limpiarPantalla()">Clear</button>
+            <button class="btn" onclick="verEnPantalla('7')">7</button>
+            <button class="btn" onclick="verEnPantalla('8')">8</button>
+            <button class="btn" onclick="verEnPantalla('9')">9</button>
+            <button class="operador-btn" onclick="verEnPantalla('+')">+</button>
+            <button class="btn" onclick="verEnPantalla('4')">4</button>
+            <button class="btn" onclick="verEnPantalla('5')">5</button>
+            <button class="btn" onclick="verEnPantalla('6')">6</button>
+            <button class="operador-btn" onclick="verEnPantalla('-')">-</button>
+            <button class="btn" onclick="verEnPantalla('1')">1</button>
+            <button class="btn" onclick="verEnPantalla('2')">2</button>
+            <button class="btn" onclick="verEnPantalla('3')">3</button>
+            <button class="operador-btn" onclick="verEnPantalla('*')">*</button>
+            <button class="btn" onclick="verEnPantalla('.')">.</button>
+            <button class="btn" onclick="verEnPantalla('0')">0</button>
+            <button class="btn" onclick="calcular()">=</button>
+            <button class="operador-btn" onclick="verEnPantalla('/')">/</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
